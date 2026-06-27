@@ -1,32 +1,28 @@
-# 🎬 Netflix Clone — Flask + SQLite
+#  Netflix Clone — Flask + SQLite
 
 A pixel-faithful Netflix Pakistan landing page clone with a full authentication system built using **Flask** and **SQLite**.
 
 ---
 
-## 🚀 Features
+##  Features
 
 ### Landing Page
-- ✅ Responsive Netflix-style hero section with background overlay
-- ✅ Sticky navbar that turns solid black on scroll
-- ✅ Email validation on "Get Started" button
-- ✅ Scroll-reveal animations on all feature sections
-- ✅ Working FAQ accordion with smooth open/close animation
-- ✅ 4 feature sections (TV, Mobile, Devices, Kids)
-- ✅ Fully responsive (desktop, tablet, mobile)
+-  Responsive Netflix-style hero section with background overlay
+-  Email validation on "Get Started" button
+-  Scroll-reveal animations on all feature sections
+-  Working FAQ accordion with smooth open/close animation
+-  Fully responsive (desktop, tablet, mobile)
 
 ### Authentication System
-- ✅ **Sign Up** — Register with name, email, password (hashed with Werkzeug)
-- ✅ **Login** — Verified against database, session managed with Flask
-- ✅ **Dashboard** — Welcome screen shown on successful login
-- ✅ **Logout** — Clears session securely
-- ✅ Duplicate email detection
-- ✅ Flash messages for errors and success
-- ✅ Floating label form inputs (Netflix-style)
-
+-  **Sign Up** — Register with name, email, password (hashed with Werkzeug)
+-  **Login** — Verified against database, session managed with Flask
+-  **Dashboard** — Welcome screen shown on successful login
+-  **Logout** — Clears session securely
+-  Duplicate email detection
+-  Floating label form inputs (Netflix-style)
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer     | Technology           |
 |-----------|----------------------|
@@ -38,7 +34,7 @@ A pixel-faithful Netflix Pakistan landing page clone with a full authentication 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 netflix-clone/
@@ -68,7 +64,7 @@ netflix-clone/
 
 ---
 
-## ⚙️ Setup & Run Locally
+##  Setup & Run Locally
 
 ### 1. Clone the repository
 ```bash
@@ -104,7 +100,7 @@ http://localhost:5000
 
 ---
 
-## 📸 Pages
+##  Pages
 
 | Page        | Route        |
 |-------------|--------------|
@@ -116,7 +112,7 @@ http://localhost:5000
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Noor Muhammad**
 - GitHub: [@noormuhammad-tech](https://github.com/noormuhammad-tech)
@@ -124,4 +120,4 @@ http://localhost:5000
 
 ---
 
-> ⚠️ This project is for educational/portfolio purposes only. Netflix name and assets belong to Netflix, Inc.
+>  This project is for educational/portfolio purposes only. Netflix name and assets belong to Netflix, Inc.
