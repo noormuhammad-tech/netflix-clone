@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Netflix Pakistan - Watch unlimited movies, TV shows and more. Starts at Rs 250.">
+    <title>Netflix Pakistan - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main">
+        <nav id="navbar">
+            <span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+            </span>
+            <div>
+                <button class="btn btn-english">English</button>
+                <a href="{{ url_for('login') }}" class="btn btn-red-sm">Sign In</a>
+            </div>
+        </nav>
+
+        <div class="box"></div>
+
+        <div class="hero">
+            <span>Unlimited movies, TV shows, and more</span>
+            <span>Starts at Rs 250. Cancel anytime.</span>
+            <span>Ready to watch? Enter your email to create or restart your membership.</span>
+            <div class="hero-buttons">
+                <input type="email" id="heroEmail" placeholder="Email Address">
+                <a href="{{ url_for('signup') }}" class="btn btn-red" id="getStartedBtn">Get Started &rsaquo;</a>
+            </div>
+            <p class="email-error" id="emailError">Please enter a valid email address.</p>
+        </div>
+
+        <div class="separation"></div>
+    </div>
+    <section class="first reveal">
+        <div>
+            <span>Enjoy on your TV</span>
+            <span>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
+        </div>
+        <div class="secImg">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                autoplay loop muted playsinline></video>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+    <section class="first second reveal">
+        <div class="secImg">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Mobile">
+        </div>
+        <div>
+            <span>Download your shows to watch offline</span>
+            <span>Save your favourites easily and always have something to watch.</span>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+    <section class="first reveal">
+        <div>
+            <span>Watch everywhere</span>
+            <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+        </div>
+        <div class="secImg">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="Devices">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                autoplay loop muted playsinline></video>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+    <section class="first second reveal">
+        <div class="secImg">
+            <img src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                alt="Kids profile">
+        </div>
+        <div>
+            <span>Create profiles for kids</span>
+            <span>Send children on adventures with their favourite characters in a space made just for them — free with your membership.</span>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+    <section class="faq reveal">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faqbox" onclick="toggleFaq(this)">
+            <span>What is Netflix?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="faq-answer">
+                Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want — all for one low monthly price.
+            </div>
+        </div>
+
+        <div class="faqbox" onclick="toggleFaq(this)">
+            <span>How much does Netflix cost?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="faq-answer">
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device. Plans start at Rs 250 per month. No extra costs, no contracts.
+            </div>
+        </div>
+
+        <div class="faqbox" onclick="toggleFaq(this)">
+            <span>What can I watch on Netflix?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="faq-answer">
+                Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+            </div>
+        </div>
+
+        <div class="faqbox" onclick="toggleFaq(this)">
+            <span>Where can I watch?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="faq-answer">
+                Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.
+            </div>
+        </div>
+
+        <div class="faqbox" onclick="toggleFaq(this)">
+            <span>How do I cancel?</span>
+            <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="faq-answer">
+                Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees — start or stop your account anytime.
+            </div>
+        </div>
+
+        <!-- CTA below FAQ -->
+        <div class="faq-cta">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="hero-buttons">
+                <input type="email" id="faqEmail" placeholder="Email Address">
+                <a href="{{ url_for('signup') }}" class="btn btn-red">Get Started &rsaquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+    <footer>
+        <div class="questions">Questions? Call 000-800-919-1694</div>
+        <div class="footer">
+            <div class="footer-item">
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            <div class="footer-item">
+                <a href="#">Help Centre</a>
+                <a href="#">Account</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div class="footer-item">
+                <a href="#">Media Centre</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+            </div>
+            <div class="footer-item">
+                <a href="#">Contact Us</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Only on Netflix</a>
+                <a href="#">Ad Choices</a>
+            </div>
+        </div>
+        <div class="footer-lang">
+            <button class="btn btn-english footer-lang-btn">🌐 English</button>
+        </div>
+        <p class="footer-copy">Netflix Pakistan</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

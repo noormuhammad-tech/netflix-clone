@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Welcome</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body class="auth-body">
+
+    <nav id="navbar" class="auth-nav">
+        <a href="{{ url_for('index') }}">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+        </a>
+        <a href="{{ url_for('logout') }}" class="btn btn-red-sm">Sign Out</a>
+    </nav>
+
+    <div class="auth-bg"></div>
+
+    <div class="auth-container">
+        <div class="auth-box dashboard-box">
+
+            <!-- Success checkmark animation -->
+            <div class="success-icon">
+                <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark-check" fill="none" d="M14 27l8 8 16-16"/>
+                </svg>
+            </div>
+
+            <h1>Welcome back,<br><span class="user-name">{{ name }}!</span></h1>
+            <p class="dashboard-msg">You have successfully logged in to Netflix Pakistan.</p>
+
+            <div class="dashboard-actions">
+                <a href="{{ url_for('index') }}" class="auth-btn">Go to Home</a>
+                <a href="{{ url_for('logout') }}" class="auth-btn auth-btn-outline">Sign Out</a>
+            </div>
+
+            <div class="dashboard-info">
+                <div class="info-card">
+                    <span>📺</span>
+                    <p>Browse unlimited movies & shows</p>
+                </div>
+                <div class="info-card">
+                    <span>📱</span>
+                    <p>Watch on any device, anytime</p>
+                </div>
+                <div class="info-card">
+                    <span>⬇️</span>
+                    <p>Download for offline viewing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

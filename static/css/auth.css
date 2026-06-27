@@ -1,0 +1,305 @@
+
+.auth-body {
+    background-color: #000;
+    min-height: 100vh;
+    position: relative;
+}
+
+.auth-bg {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/hero-atf.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+    z-index: 0;
+}
+
+.auth-nav {
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    padding: 0 60px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.auth-nav img {
+    width: 140px;
+}
+
+.auth-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 68px);
+    padding: 40px 20px 60px;
+}
+
+.auth-box {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+    padding: 60px 68px;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+}
+
+.auth-box h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.flash {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.flash-error {
+    background-color: #e87c03;
+    color: white;
+}
+
+.flash-success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 20px 16px 8px;
+    font-size: 16px;
+    background-color: #333;
+    border: none;
+    border-bottom: 2px solid #8c8c8c;
+    border-radius: 4px 4px 0 0;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-bottom-color: #e50914;
+    background-color: #454545;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Float label up when input has content or is focused */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+    top: 10px;
+    font-size: 11px;
+    color: #8c8c8c;
+}
+
+.auth-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.auth-btn:hover {
+    background-color: #c40812;
+    transform: scale(1.01);
+}
+
+.auth-btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 12px;
+}
+
+.auth-btn-outline:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: none;
+}
+
+.auth-extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    accent-color: #e50914;
+    width: 14px;
+    height: 14px;
+}
+
+.forgot {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.forgot:hover { text-decoration: underline; }
+
+.auth-switch {
+    margin-top: 60px;
+    color: #737373;
+    font-size: 15px;
+}
+
+.auth-switch a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-switch a:hover { text-decoration: underline; }
+
+.auth-disclaimer {
+    margin-top: 16px;
+    color: #737373;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.dashboard-box {
+    text-align: center;
+    max-width: 520px;
+}
+
+.dashboard-box h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+
+.user-name {
+    color: #e50914;
+}
+
+.dashboard-msg {
+    color: #b3b3b3;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.dashboard-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+}
+
+.success-icon svg {
+    width: 72px;
+    height: 72px;
+}
+
+.checkmark-circle {
+    stroke: #2ecc71;
+    stroke-width: 2;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    stroke: #2ecc71;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+}
+
+@keyframes stroke {
+    100% { stroke-dashoffset: 0; }
+}
+
+.dashboard-info {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #1a1a1a;
+    border-radius: 6px;
+    padding: 20px 16px;
+    text-align: center;
+    width: 130px;
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.info-card span {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .auth-box {
+        padding: 40px 24px;
+    }
+
+    .auth-nav {
+        padding: 0 20px;
+    }
+
+    .auth-box h1 {
+        font-size: 26px;
+    }
+
+    .dashboard-info {
+        gap: 10px;
+    }
+
+    .info-card {
+        width: 110px;
+        font-size: 11px;
+    }
+}
